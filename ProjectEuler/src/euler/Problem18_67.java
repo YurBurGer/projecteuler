@@ -3,7 +3,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class Problems_16_67 {
+public class Problem18_67 {
 
 	/**
 	 * @param args

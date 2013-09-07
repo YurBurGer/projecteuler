@@ -9,7 +9,7 @@ import java.util.Scanner;
  * @author Yuriy Gerasimov
  *
  */
-public class Problem8 {
+public class Problem08 {
 	
 	//methods
 	public static void main(String[] args) {

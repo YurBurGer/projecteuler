@@ -1,37 +1,28 @@
 package primes;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.TreeSet;
 
 
 public class Primes {
 	public static TreeSet<Integer> PrimeSet(int lim){
 		TreeSet<Integer> res=new TreeSet<>();
-		ArrayList<Integer> s=new ArrayList<>();
-		for(Integer i=2;i<=lim;i++)
-			s.add(i);
-		for(int i=0;i<s.size();i++){
-			int n=2;
-			while(n*s.get(i)<=s.get(s.size()-1)){
-				Integer k=n*s.get(i);
-				s.remove(k);
-				n++;
-			}
-		}
-		res.addAll(s);
+		res.addAll(PrimeList(lim));
 		return res;
 	}
-	public static ArrayList<Integer> PrimeList(int lim){
-		ArrayList<Integer> s=new ArrayList<>();
-		for(Integer i=2;i<=lim;i++)
-			s.add(i);
-		for(int i=0;i<s.size();i++){
-			int n=2;
-			while(n*s.get(i)<=s.get(s.size()-1)){
-				Integer k=n*s.get(i);
-				s.remove(k);
-				n++;
+	public static LinkedList<Integer> PrimeList(int lim){
+		LinkedList<Integer> s=new LinkedList<>();
+		s.add(2);
+		s.add(3);
+		for(Integer i=5;i<=lim;i+=2){
+			boolean f=true;
+			int k=1;
+			while(s.get(k)<=Math.sqrt(i)&&f){
+				f&=(i%s.get(k)!=0);
+				k++;
 			}
+			if(f)
+				s.add(i);
 		}
 		return s;
 	}
