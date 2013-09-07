@@ -69,6 +69,8 @@ public class Hand implements Comparable<Hand>{
 		}
 		return 0;	
 	}
+	//TODO
+	@SuppressWarnings("unused")
 	private void sortbyhandtype(){
 		switch (handtype){
 		case 7:
