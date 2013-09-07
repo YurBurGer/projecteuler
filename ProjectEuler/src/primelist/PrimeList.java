@@ -1,8 +1,8 @@
-package simlist;
+package primelist;
 
 import java.util.ArrayList;
 
-public class Simlist {
+public class PrimeList {
 	public static ArrayList<Integer> listgen(int lim){
 		ArrayList<Integer> s=new ArrayList<>();
 		for(Integer i=2;i<=lim;i++)
